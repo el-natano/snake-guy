@@ -53,17 +53,17 @@ def run_snake_game():
     snake_pos.extend([[int(SCREEN_WIDTH / 2), int(SCREEN_HEIGHT / 2) + CELL_SIZE * i] for i in range(1, 4)])
     apple_pos = [random.randint(0, SCREEN_WIDTH // CELL_SIZE - 1) * CELL_SIZE,
     random.randint(0, SCREEN_HEIGHT // CELL_SIZE - 1) * CELL_SIZE] # Random position for the apple
-    font = pygame.font.SysFont(None, 3) # Font used for displaying the score
+    font = pygame.font.SysFont(None, 30) # Font used for displaying the score
 
-    try:
+    # try:
 
-        pygame.mixer.music.load('background_music.mp3')
-        pygame.mixer.music.set_volume(0.5) # Set the music volume
-        pygame.mixer.music.play(-1) # Play the music in a loop
-    except pygame.error as e:
+    #     pygame.mixer.music.load('background_music.mp3')
+    #     pygame.mixer.music.set_volume(0.5) # Set the music volume
+    #     pygame.mixer.music.play(-1) # Play the music in a loop
+    # except pygame.error as e:
 
 
-        print(f"Error loading or playing music in Snake game: {e}")
+    #     print(f"Error loading or playing music in Snake game: {e}")
 
     running_game = True # Variable to control the main game loop
     while running_game:
